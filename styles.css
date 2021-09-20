@@ -1,0 +1,11 @@
+.boxy {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    display: inline-block
+}
+
+#sumOfBoxes {
+    text-decoration-color: crimson;
+    text-align: center;
+}
