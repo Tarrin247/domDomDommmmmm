@@ -1,27 +1,31 @@
-window.addEventListener('DOMContentLoaded', function() {
-    let btn = document.createElement('button'); 
+window.addEventListener('DOMContentLoaded', function () {
+    let btn = document.createElement('button');
     btn.innerHTML = 'Add Square';
     document.body.appendChild(btn);
     console.log('Button Added');
     // Create button upon loading.
-    
+
     let sumOfBoxes = 0
     // Create variable to calculate div.id. 
-   
-    btn.addEventListener('click', function() {
+
+    btn.addEventListener('click', function () {
         let div = document.createElement('div');
         div.className = 'boxy';
-        document.body.appendChild(div);    
-        // Add div when button is clicked. Assign class. 
-        // alert('Hello World!'); 
         
+        document.body.appendChild(div);
+
+        let numSpan = document.createElement('span');
+        numSpan.style.color = 'white';
+        numSpan.innerText = sumOfBoxes;
+        numSpan.style.visibility = 'hidden';
+        numSpan.id = 'sumBoxy'
+        div.appendChild(numSpan);
+
         sumOfBoxes++;
         div.id = sumOfBoxes;
-        //Set id to a variable with counter. This doesn't work. It makes me frustrated. :^/ 
-        div.addEventListener("mouseEnter", function() {
-            document.getElementById(id).display = sumOfBoxes;
-            div.innerText = "Id: " + sumOfBoxes;
-
+        div.addEventListener("mouseover", function () {
+            document.getElementById('sumBoxy').style.visibility = "visable";
+            console.log(numSpan);
         })
 
         document.getElementById(sumOfBoxes).addEventListener('click', function () {
@@ -30,10 +34,10 @@ window.addEventListener('DOMContentLoaded', function() {
             // Change to random background color upon a click.
         })
 
-        
+
 
 
     })
-    
+
 });
 

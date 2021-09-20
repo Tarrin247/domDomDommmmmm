@@ -5,7 +5,6 @@
     display: inline-block
 }
 
-#sumOfBoxes {
-    text-decoration-color: crimson;
-    text-align: center;
+#sumBoxy:hover {
+    display:lock;
 }
