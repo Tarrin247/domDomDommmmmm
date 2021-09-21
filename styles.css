@@ -1,6 +1,7 @@
 .boxy {
     width: 100px;
     height: 100px;
+    margin: 1em;
     background-color: black;
     display: inline-block
 }
